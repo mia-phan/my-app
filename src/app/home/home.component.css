@@ -4,3 +4,11 @@ section {
     align-items: center;
     justify-content: center;
 }
+
+.section-one {
+    background: linear-gradient(#0F2027, #203A43, #2C5364);
+}
+
+.section-two {
+    background: linear-gradient(#000046, #1CB5E0);
+}

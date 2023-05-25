@@ -1,12 +1,10 @@
 .navbar {
     overflow: hidden;
     list-style-type: none;
+    position: sticky;
+    top: 0;
 }
 
 .navbar a {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    justify-content: space-between;
     margin: 30px;
 }
