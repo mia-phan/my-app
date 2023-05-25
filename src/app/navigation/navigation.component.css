@@ -1,0 +1,10 @@
+.navbar {
+    overflow: hidden;
+    list-style-type: none;
+    position: sticky;
+    top: 0;
+}
+
+.navbar a {
+    margin: 30px;
+}
