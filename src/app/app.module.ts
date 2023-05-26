@@ -7,11 +7,13 @@ import { HomeComponent } from './home/home.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { ProjectComponent } from './project/project.component';
+import { HeaderComponent } from './utilities/header/header.component';
 
 const routes: Routes =[
   { path: '', component: HomeComponent },
   { path: 'projects', component: ProjectComponent },
-  { path: 'about', component: AboutMeComponent}
+  { path: 'about', component: AboutMeComponent },
+  { path: '**', redirectTo: ''}
 ]
 
 @NgModule({
@@ -20,7 +22,8 @@ const routes: Routes =[
     HomeComponent,
     NavigationComponent,
     AboutMeComponent,
-    ProjectComponent
+    ProjectComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
