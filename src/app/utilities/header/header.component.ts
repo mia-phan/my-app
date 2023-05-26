@@ -9,7 +9,21 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  public carousel() {
+    let slideIndex = 0;
+    const x = document.getElementsByClassName('mySlide') as HTMLCollectionOf<HTMLElement>   //getElementByClassName only returns Element inwhich 'style' is not a property
+    for (let image = 0; image < x.length; image++) {
+      x[image].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {
+      slideIndex = 1
+    }
+    x[slideIndex-1].style.display = "block";
+    setTimeout(this.carousel, 2000); // Change image every 2 seconds
+  }
+  
+  public ngOnInit(): void {
   }
 
 }
