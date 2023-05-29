@@ -1,13 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { NavigationComponent } from './navigation/navigation.component';
-import { AboutMeComponent } from './about-me/about-me.component';
-import { ProjectComponent } from './project/project.component';
-import { HeaderComponent } from './utilities/header/header.component';
+
+// MDB Modules
 import { MdbAccordionModule } from 'mdb-angular-ui-kit/accordion';
 import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
 import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
@@ -23,27 +19,16 @@ import { MdbScrollspyModule } from 'mdb-angular-ui-kit/scrollspy';
 import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
 import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-const routes: Routes =[
-  { path: '', component: HomeComponent },
-  { path: 'projects', component: ProjectComponent },
-  { path: 'about', component: AboutMeComponent },
-  { path: '**', redirectTo: ''}
-]
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HomeComponent,
-    NavigationComponent,
-    AboutMeComponent,
-    ProjectComponent,
-    HeaderComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes),
+    BrowserAnimationsModule,
     MdbAccordionModule,
     MdbCarouselModule,
     MdbCheckboxModule,
@@ -59,7 +44,6 @@ const routes: Routes =[
     MdbTabsModule,
     MdbTooltipModule,
     MdbValidationModule,
-    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
