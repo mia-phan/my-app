@@ -7,7 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { ProjectComponent } from './project/project.component';
-import { HeaderComponent } from './utilities/header/header.component';
+import { ImageSliderModule } from './utilities/image-slider/image-slider.module';
+import { SlideInterface } from './utilities/image-slider/types/slide.interface';
 
 const routes: Routes =[
   { path: '', component: HomeComponent },
@@ -22,14 +23,20 @@ const routes: Routes =[
     HomeComponent,
     NavigationComponent,
     AboutMeComponent,
-    ProjectComponent,
-    HeaderComponent
+    ProjectComponent
   ],
   imports: [
     BrowserModule,
+    ImageSliderModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  slides: SlideInterface[] = [
+    { url: './src/assets/clem-onojeghuo-Ud4GcZW3rOY-unsplash.jpg', title: 'figureOne' },
+    { url: './src/assets/jean-philippe-delberghe-75xPHEQBmvA-unsplash.jpg', title: 'figureTwo' },
+    { url: './src/assets/fabio-oyXis2kALVg-unsplash.jpg', title: 'figureThree'},
+  ]
+}
