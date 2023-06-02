@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NO_ERRORS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { CloudinaryModule } from '@cloudinary/ng';
@@ -8,14 +8,13 @@ import { HomeComponent } from './home/home.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { ProjectComponent } from './project/project.component';
-import { HeaderComponent } from './utilities/header/header.component';
 
-const routes: Routes =[
+const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'projects', component: ProjectComponent },
   { path: 'about', component: AboutMeComponent },
-  { path: '**', redirectTo: ''}
-]
+  { path: '**', redirectTo: '' },
+];
 
 @NgModule({
   declarations: [
@@ -24,14 +23,10 @@ const routes: Routes =[
     NavigationComponent,
     AboutMeComponent,
     ProjectComponent,
-    HeaderComponent
   ],
-  imports: [
-    BrowserModule,
-    CloudinaryModule,
-    RouterModule.forRoot(routes)
-  ],
+  imports: [BrowserModule, CloudinaryModule, RouterModule.forRoot(routes)],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [NO_ERRORS_SCHEMA],
 })
-export class AppModule { }
+export class AppModule {}
