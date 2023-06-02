@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ImageSlider } from './imageSlide.interface';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
+  @Input() slides: ImageSlider[] = [];
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
+  currentIndex: number = 0;
+
+  getCurrentImageUrl(): string {
+    return `url('${this.slides[this.currentIndex].url}')`;
   }
 
+  ngOnInit(): void {}
 }
