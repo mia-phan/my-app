@@ -1,8 +1,15 @@
 section {
     display: flex;
     min-height: 100vh;
-    align-items: center;
-    justify-content: center;
+}
+
+.greeting {
+  font-size: 150px;
+  font-weight: 700;
+}
+
+.name {
+  font-size:  80px;
 }
 
 .section-one {
