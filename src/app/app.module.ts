@@ -5,26 +5,30 @@ import { CloudinaryModule } from '@cloudinary/ng';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { NavigationComponent } from './navigation/navigation.component';
 import { AboutMeComponent } from './about-me/about-me.component';
-import { ProjectComponent } from './project/project.component';
+import { AboutMeModule } from './about-me/about-me.module';
+import { HomeModule } from './home/home.module';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'projects', component: ProjectComponent },
+  {
+    path: 'projects',
+    loadChildren: () =>
+      import('./project/project.module').then((m) => m.ProjectModule),
+  },
   { path: 'about', component: AboutMeComponent },
   { path: '**', redirectTo: '' },
 ];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    NavigationComponent,
-    AboutMeComponent,
-    ProjectComponent,
+  declarations: [AppComponent],
+  imports: [
+    BrowserModule,
+    CloudinaryModule,
+    RouterModule.forRoot(routes),
+    AboutMeModule,
+    HomeModule,
   ],
-  imports: [BrowserModule, CloudinaryModule, RouterModule.forRoot(routes)],
   providers: [],
   bootstrap: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA],

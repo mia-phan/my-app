@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CloudinaryModule } from '@cloudinary/ng';
-
+import { NavigationModule } from '../navigation/navigation.module';
+import { AboutMeComponent } from './about-me.component';
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule,
-    CloudinaryModule
-  ]
+  declarations: [AboutMeComponent],
+  imports: [CommonModule, CloudinaryModule, NavigationModule],
 })
-export class AboutMeModule { }
+export class AboutMeModule {}
