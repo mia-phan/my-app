@@ -7,51 +7,106 @@
         <div>
             <h1 class="flex flex-row justify-center item-center title">ABOUT ME</h1>
             <p class="about-content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nibh odio,
-                scelerisque sit amet
-                condimentum ut,
-                tincidunt scelerisque elit. Vestibulum sodales dolor eget purus consequat placerat. Duis ac mollis leo.
-                Suspendisse non
-                suscipit nunc, non hendrerit eros. Sed a sem odio. Suspendisse non molestie orci, at bibendum ex. Proin
-                eu
-                risus lorem.
-                Donec vestibulum ultrices ante, a tincidunt mauris. Maecenas ut pharetra arcu. Quisque et mi urna. Sed
-                imperdiet tortor
-                quis elit porta, congue pellentesque augue pretium. Mauris ac porta arcu. Phasellus vitae justo non quam
-                tincidunt
-                fermentum. Quisque varius a eros eget elementum.
-
-                Curabitur non mauris elementum, imperdiet leo a, vehicula turpis. Aenean cursus aliquet turpis, eget
-                tempor
-                orci
-                efficitur ac. Mauris non odio eu dui bibendum tempus. Nullam volutpat urna a finibus placerat. Donec
-                sodales, leo vel
-                convallis pellentesque, dolor erat bibendum metus, in tempus augue quam at neque. Vivamus urna nunc,
-                placerat at
-                dignissim in, volutpat non dolor. Nulla feugiat libero sit amet sem sollicitudin, vitae blandit justo
-                pellentesque.
-                Proin laoreet auctor risus ut molestie. Duis venenatis semper accumsan. Donec eget orci id ex mattis
-                tristique vitae a
-                purus. Donec congue magna vel efficitur semper. Vestibulum nec felis orci.
+                My name is Mia Phan. I'm a junior software developer.
             </p>
         </div>
 
-        <div class="w-[300px] shadow-lg rounded-lg">
+        <div class="rounded-full">
           <advanced-image [cldImg]="myImage"></advanced-image>
         </div>
 
-        <div class="border border-solid border-slate-500">
-            <img src="" alt="">
-            <p class="flex flex-row justify-center items-center">Image goes here</p>
+
+    </div>
+    <div class="grid grid-cols-2 gap-8 m-[100px] work-experience">
+      <div class="flex flex-col career-object">
+        <h1>Career Objectives</h1>
+        <hr class="w-[60px] mb-2 divide-solid">
+        <p>After four years of experience in management, I'm now seeking to leverage my knowledge and challenge myself in a whole new career.</p>
+      </div>
+      <div class="flex flex-col education">
+        <h1>Education</h1>
+        <hr class="w-[60px] mb-2 divide-solid">
+        <div class="flex flex-row gap-5">
+          <div class="flex flex-col">2014-2017</div>
+          <div class="flex flex-col">
+            <p class="sub-heading">Bachelor of International Business</p>
+            <p>International Pacific United</p>
+          </div>
         </div>
-        <p>
-            Sed vitae euismod ligula, non condimentum mauris. Aenean sollicitudin dapibus pharetra. Quisque a
-            scelerisque justo, eu
-            euismod justo. Nullam ante tellus, consequat eget semper ac, pulvinar at sem. Suspendisse gravida, tellus
-            sit amet
-            suscipit finibus, nibh risus porta metus, volutpat blandit purus sem ut nulla. Phasellus sit amet nulla in
-            dui efficitur
-            efficitur in ac risus. Pellentesque ut semper risus. Pellentesque eget finibus ante.
-        </p>
+      </div>
+      <div class="flex flex-col skill-and-competencies">
+        <h1>Skills and Competencies</h1>
+        <hr class="w-[60px] mb-2 divide-solid">
+        <ul>
+          <li>Management</li>
+          <li>Decision making</li>
+          <li>Problem solving</li>
+          <li>Critical Thinking</li>
+          <li>TypeScript/JavaScript</li>
+          <li>Angular 14+</li>
+          <li>GraphQL</li>
+          <li>Express</li>
+        </ul>
+      </div>
+      <div class="flex flex-col gap-3 certifications">
+        <h1>Certifications</h1>
+        <hr class="w-[60px] mb-2 divide-solid">
+        <div class="flex flex-row">
+          <div class="flex flex-row mr-[50px]">2020</div>
+          <div class="flex flex-col">
+            <p class="sub-heading">Certified Creative Coding</p>
+            <p>NYUx, online learning initiative of New
+            York University</p>
+          </div>
+
+        </div>
+        <div class="flex flex-row">
+          <div class="flex flex-row mr-[50px]">2022</div>
+          <div class="flex flex-col">
+            <p class="sub-heading">Certified The Web Developer
+            Bootcamp</p>
+            <p class="sub-heading">Understanding Typescript</p>
+            <p class="sub-heading">Angular Essentials</p>
+          </div>
+
+          </div>
+        </div>
+
+    </div>
+    <div class="flex flex-col m-[100px] gap-5 work-experience">
+      <h1>Work Experience</h1>
+      <hr class="w-[60px] divide-solid">
+      <div class="flex flex-row">
+        <div class="flex flex-col">
+          <h2>Restaurant Manager</h2>
+          <h3>Yeda Restaurant</h3>
+        </div>
+        <div class="flex flex-row ml-[450px]">Apr 2018 - Aug 2021</div>
+      </div>
+      <div class="flex flex-col">
+        <ul>
+          <li>Manage stock level, front house and kitchen staff members</li>
+          <li>Recruit and train staff members</li>
+          <li>Ensure a smooth operation and the best service to be delivered</li>
+          <li>Prepare and present staffing/sales reports</li>
+          <li>Make improvements to the running of the business and developing the restaurant</li>
+        </ul>
+      </div>
+
+      <div class="flex flex-row">
+        <div class="flex flex-col">
+          <h2>Internship Full Stack Developer</h2>
+          <h3>MyMahi</h3>
+        </div>
+        <div class="flex flex-row ml-[330px]">Dec 2022 - Feb 2023</div>
+      </div>
+      <div class="flex flex-col">
+        <ul>
+          <li>Assist in debugging and fixing minor bugs in backend services</li>
+          <li>Migrate app's UI from Angular Flex Layout library to Tailwind CSS</li>
+          <li>Follow CI/CD processes to take code from development, to testing, to deployment, maintaining code
+            ownership</li>
+        </ul>
+      </div>
     </div>
 </ng-container>

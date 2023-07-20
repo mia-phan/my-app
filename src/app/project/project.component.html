@@ -18,9 +18,9 @@
           </a>
         </div>
 
-        <div class="grid grid-cols-3 gap-3 overflow-x-auto shadow-lg shadow-blue-100 rounded-xl">
-          <div *ngFor="let image of imagesIllustration" class="w-[250px] h-auto">
-            <img src="{{image.url}}" alt="{{image.title}}">
+        <div class="grid grid-cols-3 gap-5">
+          <div *ngFor="let image of imagesIllustration">
+            <img class="w-[200px] h-[200px] overflow-auto shadow-lg shadow-blue-100 rounded-full" src="{{image.url}}" alt="{{image.title}}">
           </div>
         </div>
       </div>
@@ -43,8 +43,6 @@
           </a>
         </div>
       </div>
-
-
     </div>
   <app-footer></app-footer>
 </ng-container>
