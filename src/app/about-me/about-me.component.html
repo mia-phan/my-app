@@ -3,21 +3,18 @@
         <p>animation goes here</p>
     </section>
     <app-navigation></app-navigation>
-    <div class="grid grid-cols-2 gap-8 m-[100px] p-5">
-        <div>
+    <div class="grid grid-cols-2 mobile:grid-cols-1 mobile:gap-5 gap-8 m-[100px] mobile:m-3 p-5">
+        <div class="flex flex-col">
             <h1 class="flex flex-row justify-center item-center title">ABOUT ME</h1>
-            <p class="about-content">
-                My name is Mia Phan. I'm a junior software developer.
-            </p>
+            <p>My name is Mia Phan. I'm a junior software developer.</p>
         </div>
 
-        <div class="rounded-full">
+        <div class="mobile:rounded-full">
           <advanced-image [cldImg]="myImage"></advanced-image>
         </div>
-
-
     </div>
-    <div class="grid grid-cols-2 gap-8 m-[100px] work-experience">
+
+    <div class="grid grid-cols-2 mobile:grid-cols-1 gap-8 mobile:gap-5 m-[100px] mobile:m-3 work-experience">
       <div class="flex flex-col career-object">
         <h1>Career Objectives</h1>
         <hr class="w-[60px] mb-2 divide-solid">
@@ -73,7 +70,7 @@
         </div>
 
     </div>
-    <div class="flex flex-col m-[100px] gap-5 work-experience">
+    <div class="flex flex-col m-[100px] mobile:m-3 gap-5 work-experience">
       <h1>Work Experience</h1>
       <hr class="w-[60px] divide-solid">
       <div class="flex flex-row">
@@ -81,7 +78,7 @@
           <h2>Restaurant Manager</h2>
           <h3>Yeda Restaurant</h3>
         </div>
-        <div class="flex flex-row ml-[450px]">Apr 2018 - Aug 2021</div>
+        <div class="flex flex-row ml-[450px] mobile:ml-[35px]">Apr 2018 - Aug 2021</div>
       </div>
       <div class="flex flex-col">
         <ul>
@@ -98,7 +95,7 @@
           <h2>Internship Full Stack Developer</h2>
           <h3>MyMahi</h3>
         </div>
-        <div class="flex flex-row ml-[330px]">Dec 2022 - Feb 2023</div>
+        <div class="flex flex-row ml-[330px] mobile:ml-[25px]">Dec 2022 - Feb 2023</div>
       </div>
       <div class="flex flex-col">
         <ul>
