@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-project-app',
   templateUrl: './project-app.component.html',
-  styleUrls: ['./project-app.component.css'],
+  styleUrls: ['./project-app.component.scss'],
 })
 export class ProjectAppComponent implements OnInit {
   activedRoute: ActivatedRoute;

@@ -5,7 +5,7 @@ import { Image } from 'libs/Utils/interfaces/image.interface';
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',
-  styleUrls: ['./project.component.css'],
+  styleUrls: ['./project.component.scss'],
 })
 export class ProjectComponent implements OnInit {
   @Input() imagesIllustration: Image[] = [

@@ -26,6 +26,9 @@ module.exports = {
       'web-portrait': { raw: WEB_PORTRAIT }
     }
   },
+  colors: {
+    darkblue: '#2A3042',
+  },
   plugins: [],
 }
 
