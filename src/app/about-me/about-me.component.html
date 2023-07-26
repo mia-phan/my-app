@@ -1,7 +1,7 @@
 <ng-container>
-    <app-navigation></app-navigation>
-    <div class="bg-darkblue">
-      <div class="grid grid-cols-2 place-content-center mobile:grid-cols-1 m-[100px] mobile:gap-5 gap-8 mobile:m-3 p-5">
+    <div class="flex flex-col">
+      <app-navigation></app-navigation>
+      <div class="grid grid-cols-2 place-content-center mx-[100px] mobile:grid-cols-1 mobile:gap-5 gap-8 mobile:m-3 p-5">
         <div class="flex flex-col justify-center items-center">
           <h1 class="flex flex-row justify-center item-center title">ABOUT ME</h1>
           <p>My name is Mia Phan. I'm a junior software developer. </p>
@@ -14,8 +14,9 @@
         </div>
       </div>
 
-      <div
-        class="grid grid-cols-2 place-content-center mobile:grid-cols-1 gap-8 mobile:gap-5 m-[100px] mobile:m-3 work-experience">
+      <div class="grid grid-cols-2 place-content-center mx-[100px]
+                  mobile:grid-cols-1 gap-8 mobile:gap-5
+                  mobile:m-3 work-experience">
         <div class="flex flex-col career-object">
           <h1>Career Objectives</h1>
           <hr class="w-[60px] mb-2 divide-solid">
@@ -26,7 +27,7 @@
           <h1>Education</h1>
           <hr class="w-[60px] mb-2 divide-solid">
           <div class="flex flex-row gap-5">
-            <div class="flex flex-col">2014-2017</div>
+            <div class="flex flex-col">2014 - 2017</div>
             <div class="flex flex-col">
               <p class="sub-heading">Bachelor of International Business</p>
               <p>International Pacific United</p>
@@ -76,38 +77,39 @@
       <div class="flex flex-col justify-center m-[100px] mobile:m-3 gap-5 work-experience">
         <h1>Work Experience</h1>
         <hr class="w-[60px] divide-solid">
-        <div class="flex flex-row mobile:flex-col">
+        <div class="flex flex-row gap-5 mobile:flex-col">
+          <div class="flex flex-row mobile:ml-0">Apr 2018 - Aug 2021</div>
           <div class="flex flex-col">
-            <h2>Restaurant Manager</h2>
-            <h3>Yeda Restaurant</h3>
+            <h2 class="sub-heading">Restaurant Manager</h2>
+            <h3 class="sub-heading">Yeda Restaurant</h3>
+            <div class="flex flex-col">
+              <ul>
+                <li>Manage stock level, front house and kitchen staff members</li>
+                <li>Recruit and train staff members</li>
+                <li>Ensure a smooth operation and the best service to be delivered</li>
+                <li>Prepare and present staffing/sales reports</li>
+                <li>Make improvements to the running of the business and developing the restaurant</li>
+              </ul>
+            </div>
           </div>
-          <div class="flex flex-row ml-[450px] mobile:ml-0">Apr 2018 - Aug 2021</div>
-        </div>
-        <div class="flex flex-col">
-          <ul>
-            <li>Manage stock level, front house and kitchen staff members</li>
-            <li>Recruit and train staff members</li>
-            <li>Ensure a smooth operation and the best service to be delivered</li>
-            <li>Prepare and present staffing/sales reports</li>
-            <li>Make improvements to the running of the business and developing the restaurant</li>
-          </ul>
         </div>
 
-        <div class="flex flex-row mobile:flex-col">
+        <div class="flex flex-row gap-5 mobile:flex-col">
+          <div class="flex flex-row mobile:ml-0">Dec 2022 - Feb 2023</div>
           <div class="flex flex-col">
-            <h2>Internship Full Stack Developer</h2>
-            <h3>MyMahi</h3>
+            <h2 class="sub-heading">Internship Full Stack Developer</h2>
+            <h3 class="sub-heading">MyMahi</h3>
+            <div class="flex flex-col">
+              <ul>
+                <li>Assist in debugging and fixing minor bugs in backend services</li>
+                <li>Migrate app's UI from Angular Flex Layout library to Tailwind CSS</li>
+                <li>Follow CI/CD processes to take code from development, to testing, to deployment, maintaining code
+                  ownership</li>
+              </ul>
+            </div>
           </div>
-          <div class="flex flex-row ml-[450px] mobile:ml-0">Dec 2022 - Feb 2023</div>
-        </div>
-        <div class="flex flex-col">
-          <ul>
-            <li>Assist in debugging and fixing minor bugs in backend services</li>
-            <li>Migrate app's UI from Angular Flex Layout library to Tailwind CSS</li>
-            <li>Follow CI/CD processes to take code from development, to testing, to deployment, maintaining code
-              ownership</li>
-          </ul>
         </div>
       </div>
     </div>
+
 </ng-container>

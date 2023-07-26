@@ -27,7 +27,9 @@ module.exports = {
     }
   },
   colors: {
-    darkblue: '#2A3042',
+    'header-text': '#C3A38C',
+    text: '#ECEBE7',
+    'resume-background': '#2A3042',
   },
   plugins: [],
 }
