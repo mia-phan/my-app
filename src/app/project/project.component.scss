@@ -2,3 +2,8 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 } */
+
+:host {
+  background-color: #7b5132;
+  display: flex;
+}
