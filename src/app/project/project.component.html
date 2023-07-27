@@ -1,11 +1,6 @@
 <ng-container>
-    <section class="flex flex-row justify-center items-center min-h-[400px] header">
-        <p>animation goes here</p>
-    </section>
-    <app-navigation></app-navigation>
-
-    <div class="flex flex-col m-[100px] p-5 gap-8 rounded-3xl bg-black shadow-xl shadow-current">
-      <div class="flex flex-row">
+    <div class="flex flex-col">
+      <div class="flex flex-row m-[100px] p-5 gap-8 rounded-3xl bg-black shadow-xl shadow-current">
         <div class="flex flex-col" routerLinkActive="active">
           <h1>Illustration</h1>
           <p class=" w-72 h-auto my-5 text-slate-300">
@@ -20,12 +15,12 @@
 
         <div class="grid grid-cols-3 gap-5">
           <div *ngFor="let image of imagesIllustration">
-            <img class="w-[200px] h-[200px] overflow-auto shadow-lg shadow-blue-100 rounded-full" src="{{image.url}}" alt="{{image.title}}">
+            <img class="w-[200px] h-[200px]" src="{{image.url}}" alt="{{image.title}}">
           </div>
         </div>
       </div>
 
-      <div class="flex flex-row">
+      <!-- <div class="flex flex-row">
         <div>
           <advanced-image></advanced-image>
         </div>
@@ -42,7 +37,6 @@
             </button>
           </a>
         </div>
-      </div>
+      </div> -->
     </div>
-  <app-footer></app-footer>
 </ng-container>

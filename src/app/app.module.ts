@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { AboutMeModule } from './about-me/about-me.module';
 import { HomeModule } from './home/home.module';
+import { NavigationModule } from './navigation/navigation.module';
+import { FooterModule } from './utilities/footer/footer.module';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -28,6 +30,8 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     AboutMeModule,
     HomeModule,
+    NavigationModule,
+    FooterModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
