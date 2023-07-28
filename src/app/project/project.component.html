@@ -1,42 +1,36 @@
-<ng-container>
-    <div class="flex flex-col">
-      <div class="flex flex-row m-[100px] p-5 gap-8 rounded-3xl bg-black shadow-xl shadow-current">
-        <div class="flex flex-col" routerLinkActive="active">
-          <h1>Illustration</h1>
-          <p class=" w-72 h-auto my-5 text-slate-300">
-            Personal project in illustration. These works are created with Photoshop, Lightroom and Blender.
-          </p>
-          <a class="w-40" routerLink="/projects/app">
-            <button class="bg-sky-500 hover:bg-sky-700 rounded-full w-40 h-auto">
-            <span class="text-white">See more</span>
-          </button>
-          </a>
-        </div>
-
-        <div class="grid grid-cols-3 gap-5">
-          <div *ngFor="let image of imagesIllustration">
-            <img class="w-[200px] h-[200px]" src="{{image.url}}" alt="{{image.title}}">
-          </div>
-        </div>
-      </div>
-
-      <!-- <div class="flex flex-row">
-        <div>
-          <advanced-image></advanced-image>
-        </div>
-
-        <div class="flex flex-col" routerLinkActive="active">
-          <h1>My App</h1>
-          <p class=" w-72 h-auto my-5 text-slate-300">
-            This app is powered by [...], written in TypeScript using Angular and Tailwind.
-            CI/CD processes followed to take code from development, to testing, to deployment.
-          </p>
-          <a class="w-40" routerLink="/projects/illustration">
-            <button class="bg-sky-500 hover:bg-sky-700 rounded-full w-40 h-auto">
-              <span class="text-white">See more</span>
-            </button>
-          </a>
-        </div>
-      </div> -->
+<div class="flex flex-row mobile:flex-col m-[100px] mobile:m-0 mobile:max-w p-5 gap-8 bg-white content-box">
+  <div class="flex flex-col mobile:justify-center mobile:items-center" routerLinkActive="active">
+    <h1>Illustration</h1>
+    <div class="my-5 gap-4 illustration-text-content">
+      <p>Personal projects in illustration.</p>
+      <p>Photoshop | Lightroom | Blender</p>
     </div>
-</ng-container>
+    <a class="flex justify-center items-center w-fit" routerLink="/projects/app">
+      <button class="flex flex-row bg-sky-500 hover:bg-sky-700 rounded-full">
+        <span class="p-3 text-white">See more</span>
+      </button>
+    </a>
+  </div>
+    <div *ngFor="let image of imagesIllustration">
+      <img class="w-[200px] mobile:w-auto h-auto" src="{{image.url}}" alt="{{image.title}}">
+    </div>
+</div>
+
+<!-- <div class="flex flex-row">
+  <div>
+    <advanced-image></advanced-image>
+  </div>
+
+  <div class="flex flex-col" routerLinkActive="active">
+    <h1>My App</h1>
+    <p class=" w-72 h-auto my-5 text-slate-300">
+      This app is powered by [...], written in TypeScript using Angular and Tailwind.
+      CI/CD processes followed to take code from development, to testing, to deployment.
+    </p>
+    <a class="w-40" routerLink="/projects/illustration">
+      <button class="bg-sky-500 hover:bg-sky-700 rounded-full w-40 h-auto">
+        <span class="text-white">See more</span>
+      </button>
+    </a>
+  </div>
+</div> -->
