@@ -15,15 +15,9 @@ module.exports = {
   theme: {
     extend: {},
     screens: {
-      mobile: [{ raw: MOBILE_LANDSCAPE }, { raw: MOBILE_PORTRAIT }],
-      'mobile-landscape': { raw: MOBILE_LANDSCAPE },
-      'mobile-portrait': { raw: MOBILE_PORTRAIT },
-      tablet: [{ raw: TABLET_LANDSCAPE }, { raw: TABLET_PORTRAIT }],
-      'tablet-landscape': { raw: TABLET_LANDSCAPE },
-      'tablet-portrait': { raw: TABLET_PORTRAIT },
-      web: [{ raw: WEB_LANDSCAPE }, { raw: WEB_PORTRAIT }],
-      'web-landscape': { raw: WEB_LANDSCAPE },
-      'web-portrait': { raw: WEB_PORTRAIT }
+      'mobile': [{ raw: MOBILE_LANDSCAPE }, { raw: MOBILE_PORTRAIT }],
+      'tablet': [{ raw: TABLET_LANDSCAPE }, { raw: TABLET_PORTRAIT }],
+      'web': [{ raw: WEB_LANDSCAPE }, { raw: WEB_PORTRAIT }],
     }
   },
   colors: {
