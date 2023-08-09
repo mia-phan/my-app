@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CloudinaryImage } from '@cloudinary/url-gen';
 import { Image } from 'libs/Utils/interfaces/image.interface';
 
 @Component({
@@ -22,8 +21,6 @@ export class ProjectComponent implements OnInit {
       title: 'ilse',
     },
   ];
-
-  webAppImg = new CloudinaryImage('', { cloudName: '' });
 
   constructor() {}
 

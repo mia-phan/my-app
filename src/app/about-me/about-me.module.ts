@@ -7,5 +7,6 @@ import { AboutMeComponent } from './about-me.component';
 @NgModule({
   declarations: [AboutMeComponent],
   imports: [CommonModule, CloudinaryModule, NavigationModule],
+  exports: [AboutMeComponent],
 })
 export class AboutMeModule {}
