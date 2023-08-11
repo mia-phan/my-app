@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Type } from '@angular/core';
 import { Image, images } from 'libs/Utils/interfaces/image.interface';
 import { MatDialog } from '@angular/material/dialog';
 
@@ -10,15 +10,14 @@ import { IllustrationDialogComponent } from './illustration-dialog/illustration-
   styleUrls: ['./project-illustration.component.scss'],
 })
 export class ProjectIllustrationComponent implements OnInit {
-  @Input() public image!: Image;
-  @Input() public images: Image[] = images;
+  public images: Image[] = images;
 
   constructor(public dialog: MatDialog) {}
 
-  openImageDialog() {
+  public openImageDialog(image: Image) {
     this.dialog.open(IllustrationDialogComponent, {
-      width: '600px',
-      data: {},
+      width: '1000px',
+      data: image,
     });
   }
 
