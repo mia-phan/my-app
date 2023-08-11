@@ -1,15 +1,14 @@
 import { NO_ERRORS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
-import { CloudinaryModule } from '@cloudinary/ng';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutMeComponent } from './about-me/about-me.component';
-import { AboutMeModule } from './about-me/about-me.module';
-import { HomeModule } from './home/home.module';
 import { NavigationModule } from './navigation/navigation.module';
 import { FooterModule } from './utilities/footer/footer.module';
+import { HomeModule } from './home/home.module';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -26,9 +25,8 @@ const routes: Routes = [
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    CloudinaryModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(routes),
-    AboutMeModule,
     HomeModule,
     NavigationModule,
     FooterModule,
