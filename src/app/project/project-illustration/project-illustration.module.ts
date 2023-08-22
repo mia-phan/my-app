@@ -5,9 +5,10 @@ import { MatDialogModule } from '@angular/material/dialog';
 
 import { IllustrationDialogModule } from './illustration-dialog/illustration-dialog.module';
 import { ProjectIllustrationComponent } from './project-illustration.component';
+import { ImagePostComponent } from './illustration-dialog/image-post/image-post.component';
 
 @NgModule({
-  declarations: [ProjectIllustrationComponent],
+  declarations: [ProjectIllustrationComponent, ImagePostComponent],
   imports: [
     CommonModule,
     CloudinaryModule,

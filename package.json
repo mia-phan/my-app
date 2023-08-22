@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "dev": "ts-node-dev --transpile-only --no-notify --exit-child src/index.ts",
+    "generate": "ts-node --transpile-only src/schema.ts"
   },
   "private": true,
   "dependencies": {
@@ -20,13 +22,19 @@
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
+    "@apollo/client": "^3.8.1",
     "@cloudinary/ng": "^2.0.0",
     "@cloudinary/url-gen": "^1.10.1",
     "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
+    "@types/uuid": "^9.0.2",
+    "apollo-angular": "^5.0.0",
     "cloudinary": "^1.37.0",
+    "dotenv": "^16.3.1",
+    "graphql": "^16.8.0",
     "rxjs": "~7.5.0",
     "schematics-scss-migrate": "^2.3.17",
     "tslib": "^2.3.0",
+    "uuid": "^9.0.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
@@ -35,12 +43,6 @@
     "@angular/compiler-cli": "^14.2.0",
     "@types/jasmine": "~4.0.0",
     "autoprefixer": "^10.4.14",
-    "jasmine-core": "~4.3.0",
-    "karma": "~6.4.0",
-    "karma-chrome-launcher": "~3.1.0",
-    "karma-coverage": "~2.2.0",
-    "karma-jasmine": "~5.1.0",
-    "karma-jasmine-html-reporter": "~2.0.0",
     "postcss": "^8.4.23",
     "postcss-import": "^15.1.0",
     "postcss-nesting": "^12.0.0",

@@ -6,6 +6,7 @@ import { ProjectAppComponent } from './project-app/project-app.component';
 import { ProjectIllustrationComponent } from './project-illustration/project-illustration.component';
 import { ProjectIllustrationModule } from './project-illustration/project-illustration.module';
 import { ProjectComponent } from './project.component';
+import { ImagePostComponent } from './project-illustration/illustration-dialog/image-post/image-post.component';
 
 const __routes: Routes = [
   {
@@ -13,13 +14,14 @@ const __routes: Routes = [
     children: [
       { path: 'app', component: ProjectAppComponent },
       { path: 'illustration', component: ProjectIllustrationComponent },
+      { path: 'image-post/:id', component: ImagePostComponent },
       { path: '', component: ProjectComponent, pathMatch: 'full' },
     ],
   },
 ];
 
 @NgModule({
-  declarations: [ProjectComponent, ProjectAppComponent],
+  declarations: [ProjectComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(__routes),

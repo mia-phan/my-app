@@ -3,11 +3,13 @@
     <h1 mat-dialog-title>{{data.title}}</h1>
   </div>
   <div class="flex flex-row-reverse gap-5">
-    <button>
+    <button (click)="openShareDialog()">
       <mat-icon svgIcon="share-icon" aria-hidden="false" aria-label="share-icon"></mat-icon>
     </button>
     <button>
-      <mat-icon svgIcon="heart-icon" aria-hidden="false" aria-label="heart-icon"></mat-icon>
+      <mat-icon *ngIf="isCliked" (click)="clickedHeartIcon()" svgIcon="heart-icon" aria-hidden="false" aria-label="heart-icon"></mat-icon>
+      <mat-icon *ngIf="!isCliked" (click)="clickedHeartIcon()" svgIcon="red-heart-icon" aria-hidden="false" aria-label="red-heart-icon"></mat-icon>
+      <!-- <span>{{count}}</span> -->
     </button>
   </div>
 </div>
