@@ -1,9 +1,17 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, EventEmitter, Inject, OnInit, Output } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material/icon';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+
 import { Image } from 'libs/Utils/interfaces/image.interface';
-import { heartIcon, shareIcon } from 'libs/Utils/icons/icons';
+import {
+  closeIcon,
+  heartIcon,
+  readHeartIcon,
+  shareIcon,
+} from 'libs/Utils/icons/icons';
+import { MatBottomSheet } from '@angular/material/bottom-sheet';
+import { ShareBottomSheetComponent } from './share-bottom-sheet/share-bottom-sheet.component';
 
 @Component({
   selector: 'app-illustration-dialog',
@@ -11,8 +19,15 @@ import { heartIcon, shareIcon } from 'libs/Utils/icons/icons';
   styleUrls: ['./illustration-dialog.component.scss'],
 })
 export class IllustrationDialogComponent implements OnInit {
+  // @Input() public count: number = 0;
+  @Output() public countChange = new EventEmitter<number>();
+
+  public isCliked = true;
+
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: Image,
+    public dialogRef: MatDialogRef<IllustrationDialogComponent>,
+    public bottomSheet: MatBottomSheet,
     iconRegistry: MatIconRegistry,
     sanitizer: DomSanitizer
   ) {
@@ -24,6 +39,37 @@ export class IllustrationDialogComponent implements OnInit {
       'heart-icon',
       sanitizer.bypassSecurityTrustHtml(heartIcon)
     );
+    iconRegistry.addSvgIconLiteral(
+      'red-heart-icon',
+      sanitizer.bypassSecurityTrustHtml(readHeartIcon)
+    );
+    iconRegistry.addSvgIconLiteral(
+      'close-icon',
+      sanitizer.bypassSecurityTrustHtml(closeIcon)
+    );
+  }
+
+  public clickedHeartIcon() {
+    this.isCliked = !this.isCliked;
+    // if (this.isCliked) {
+    //   this.count++;
+    // } else {
+    //   this.count--;
+    // }
+    // this.countChange.emit(this.count);
+  }
+
+  public openBottomSheet() {
+    this.bottomSheet.open(ShareBottomSheetComponent, {
+      data: {
+        shareUrl: `http://localhost:4200/projetcs/image-post/${this.data.id}`,
+        shareTitle: this.data.title,
+      },
+    });
+  }
+
+  public closeDialog() {
+    this.dialogRef.close();
   }
 
   ngOnInit(): void {}

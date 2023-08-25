@@ -1,0 +1,4 @@
+<div class="flex justity-center items-center m-5">
+  <img *ngIf="image" [src]="image.url" [alt]="">
+  <div *ngIf="!image" class="flex justify-center items-center h-screen">Image not found</div>
+</div>

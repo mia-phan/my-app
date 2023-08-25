@@ -1,0 +1,19 @@
+<div class="flex flex-auto flex-col gap-3">
+  <h1 mat-dialog-title>Share options</h1>
+  <mat-dialog-content>
+    <ul>
+      <li>
+        <button matt-button (click)="shareVia()">
+          Share via...
+        </button>
+      </li>
+      <hr class="divide-solid">
+      <li>
+        <button mat-button (click)="copyLink()">
+          Copy link
+        </button>
+      </li>
+    </ul>
+    <button mat-stroked-button class="!flex flex-auto justify-center items-center w-fit" (click)="close()" color="warn">Cancel</button>
+  </mat-dialog-content>
+
