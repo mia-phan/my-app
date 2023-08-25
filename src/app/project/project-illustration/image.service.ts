@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable, of, throwError } from 'rxjs';
 import { Image, imagesDemo } from 'libs/Utils/interfaces/image.interface';
 
 @Injectable({
@@ -13,8 +13,10 @@ export class ImageService {
     return images;
   }
 
-  getImage(id: number): Observable<Image | undefined> {
-    const image = of(imagesDemo.find((image) => image.id == id));
-    return image;
+  getImage(id: number): Observable<Image> {
+    const image = imagesDemo.find((image) => image.id == id);
+    return image != null
+      ? of(image)
+      : throwError(() => new Error('image not found'));
   }
 }
