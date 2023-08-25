@@ -1,5 +1,4 @@
 import { Component, Inject, Input, OnInit } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import {
   MatBottomSheetRef,
@@ -17,10 +16,11 @@ export class ShareDialogComponent implements OnInit {
   public shareTitle: string;
 
   constructor(
-    @Inject(MAT_DIALOG_DATA)
+    @Inject(MAT_BOTTOM_SHEET_DATA)
     public data: { shareUrl: string; shareTitle: string },
     private snackbar: MatSnackBar,
-    private clibboard: Clipboard
+    private clibboard: Clipboard,
+    private bottomSheetRef: MatBottomSheetRef
   ) {
     this.shareTitle = this.data.shareTitle;
     this.shareUrl = this.data.shareUrl;
@@ -29,18 +29,34 @@ export class ShareDialogComponent implements OnInit {
   public ngOnInit(): void {}
 
   public shareVia() {
-    // this.navigator.share({
-    //   url: this.shareUrl,
-    //   title: this.shareTitle,
-    // });
-    // .then(() => {
-    //   this.bottomSheetRef.dismiss();
-    // });
+    if (navigator.share) {
+      navigator
+        .share({
+          url: this.data.shareUrl,
+          title: this.data.shareTitle,
+        })
+        .then(
+          () => {
+            this.bottomSheetRef.dismiss();
+          },
+          (err) => {
+            console.log(err);
+            this.snackbar.open('Failed to share', undefined, {
+              duration: 4000,
+            });
+            this.bottomSheetRef.dismiss();
+          }
+        );
+    }
   }
 
   public copyLink() {
     this.clibboard.copy(this.shareUrl);
     this.snackbar.open('Copied!', undefined, { duration: 4000 });
-    // this.bottomSheetRef.dismiss();
+    this.bottomSheetRef.dismiss();
+  }
+
+  public close() {
+    this.bottomSheetRef.dismiss();
   }
 }
