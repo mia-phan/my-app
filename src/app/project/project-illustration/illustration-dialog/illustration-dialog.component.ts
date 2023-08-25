@@ -12,7 +12,8 @@ import { MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
 
 import { Image } from 'libs/Utils/interfaces/image.interface';
 import { heartIcon, readHeartIcon, shareIcon } from 'libs/Utils/icons/icons';
-import { ShareDialogComponent } from './share-dialog/share-dialog.component';
+import { MatBottomSheet } from '@angular/material/bottom-sheet';
+import { ShareBottomSheetComponent } from './share-bottom-sheet/share-bottom-sheet.component';
 
 @Component({
   selector: 'app-illustration-dialog',
@@ -20,7 +21,7 @@ import { ShareDialogComponent } from './share-dialog/share-dialog.component';
   styleUrls: ['./illustration-dialog.component.scss'],
 })
 export class IllustrationDialogComponent implements OnInit {
-  @Input() public count: number = 0;
+  // @Input() public count: number = 0;
   @Output() public countChange = new EventEmitter<number>();
 
   public isCliked = true;
@@ -28,6 +29,7 @@ export class IllustrationDialogComponent implements OnInit {
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: Image,
     public dialog: MatDialog,
+    public bottomSheet: MatBottomSheet,
     iconRegistry: MatIconRegistry,
     sanitizer: DomSanitizer
   ) {
@@ -55,11 +57,10 @@ export class IllustrationDialogComponent implements OnInit {
     // this.countChange.emit(this.count);
   }
 
-  public openShareDialog() {
-    this.dialog.open(ShareDialogComponent, {
-      width: '300px',
+  public openBottomSheet() {
+    this.bottomSheet.open(ShareBottomSheetComponent, {
       data: {
-        shareUrl: `localhost:4200/projects/image-post/${this.data.id}`,
+        shareUrl: `http://localhost:4200/projetcs/image-post/${this.data.id}`,
         shareTitle: this.data.title,
       },
     });

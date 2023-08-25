@@ -3,14 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
-import {
-  MatBottomSheet,
-  MatBottomSheetRef,
-  MatBottomSheetModule,
-} from '@angular/material/bottom-sheet';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
-import { ShareDialogModule } from './share-dialog/share-dialog.module';
+import { ShareBottomSheetModule } from './share-bottom-sheet/share-bottom-sheet.module';
 import { IllustrationDialogComponent } from './illustration-dialog.component';
 
 @NgModule({
@@ -21,12 +17,7 @@ import { IllustrationDialogComponent } from './illustration-dialog.component';
     MatDialogModule,
     MatBottomSheetModule,
     MatSnackBarModule,
-    ShareDialogModule,
-  ],
-  exports: [IllustrationDialogComponent],
-  providers: [
-    { provide: MatBottomSheetRef, useValue: {} },
-    { provide: MatBottomSheet, useValue: {} },
+    ShareBottomSheetModule,
   ],
 })
 export class IllustrationDialogModule {}

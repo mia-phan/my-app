@@ -7,11 +7,7 @@ import { ProjectIllustrationComponent } from './project-illustration/project-ill
 import { ProjectIllustrationModule } from './project-illustration/project-illustration.module';
 import { ProjectComponent } from './project.component';
 import { ImagePostComponent } from './project-illustration/image-post/image-post.component';
-import {
-  MAT_BOTTOM_SHEET_DATA,
-  MatBottomSheetModule,
-  MatBottomSheetRef,
-} from '@angular/material/bottom-sheet';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 
 const __routes: Routes = [
   {
@@ -32,11 +28,6 @@ const __routes: Routes = [
     RouterModule.forChild(__routes),
     MatBottomSheetModule,
     ProjectIllustrationModule,
-  ],
-
-  providers: [
-    { provide: MatBottomSheetRef, useValue: {} },
-    { provide: MAT_BOTTOM_SHEET_DATA, useValue: {} },
   ],
 })
 export class ProjectModule {}

@@ -7,11 +7,11 @@ import {
 import { Clipboard } from '@angular/cdk/clipboard';
 
 @Component({
-  selector: 'app-share-dialog',
-  templateUrl: './share-dialog.component.html',
-  styleUrls: ['./share-dialog.component.scss'],
+  selector: 'app-share-bottom-sheet',
+  templateUrl: './share-bottom-sheet.component.html',
+  styleUrls: ['./share-bottom-sheet.component.scss'],
 })
-export class ShareDialogComponent implements OnInit {
+export class ShareBottomSheetComponent implements OnInit {
   public shareUrl: string;
   public shareTitle: string;
 
@@ -20,7 +20,7 @@ export class ShareDialogComponent implements OnInit {
     public data: { shareUrl: string; shareTitle: string },
     private snackbar: MatSnackBar,
     private clibboard: Clipboard,
-    private bottomSheetRef: MatBottomSheetRef
+    private bottomSheetRef: MatBottomSheetRef<ShareBottomSheetComponent>
   ) {
     this.shareTitle = this.data.shareTitle;
     this.shareUrl = this.data.shareUrl;
@@ -47,6 +47,7 @@ export class ShareDialogComponent implements OnInit {
             this.bottomSheetRef.dismiss();
           }
         );
+      // console.log(this.data.shareUrl);
     }
   }
 

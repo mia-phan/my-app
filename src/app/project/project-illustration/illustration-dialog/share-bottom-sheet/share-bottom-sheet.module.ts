@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ShareDialogComponent } from './share-dialog.component';
+import { ShareBottomSheetComponent } from './share-bottom-sheet.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -11,7 +11,7 @@ import {
 } from '@angular/material/bottom-sheet';
 
 @NgModule({
-  declarations: [ShareDialogComponent],
+  declarations: [ShareBottomSheetComponent],
   imports: [
     CommonModule,
     MatDialogModule,
@@ -19,10 +19,5 @@ import {
     MatSnackBarModule,
     MatBottomSheetModule,
   ],
-  exports: [ShareDialogComponent],
-  providers: [
-    { provide: MatBottomSheetRef, useValue: {} },
-    { provide: MatBottomSheet, useValue: {} },
-  ],
 })
-export class ShareDialogModule {}
+export class ShareBottomSheetModule {}
