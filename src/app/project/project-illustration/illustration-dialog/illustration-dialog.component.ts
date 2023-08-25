@@ -1,17 +1,15 @@
-import {
-  Component,
-  EventEmitter,
-  Inject,
-  Input,
-  OnInit,
-  Output,
-} from '@angular/core';
+import { Component, EventEmitter, Inject, OnInit, Output } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material/icon';
-import { MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 import { Image } from 'libs/Utils/interfaces/image.interface';
-import { heartIcon, readHeartIcon, shareIcon } from 'libs/Utils/icons/icons';
+import {
+  closeIcon,
+  heartIcon,
+  readHeartIcon,
+  shareIcon,
+} from 'libs/Utils/icons/icons';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { ShareBottomSheetComponent } from './share-bottom-sheet/share-bottom-sheet.component';
 
@@ -28,7 +26,7 @@ export class IllustrationDialogComponent implements OnInit {
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: Image,
-    public dialog: MatDialog,
+    public dialogRef: MatDialogRef<IllustrationDialogComponent>,
     public bottomSheet: MatBottomSheet,
     iconRegistry: MatIconRegistry,
     sanitizer: DomSanitizer
@@ -44,6 +42,10 @@ export class IllustrationDialogComponent implements OnInit {
     iconRegistry.addSvgIconLiteral(
       'red-heart-icon',
       sanitizer.bypassSecurityTrustHtml(readHeartIcon)
+    );
+    iconRegistry.addSvgIconLiteral(
+      'close-icon',
+      sanitizer.bypassSecurityTrustHtml(closeIcon)
     );
   }
 
@@ -64,6 +66,10 @@ export class IllustrationDialogComponent implements OnInit {
         shareTitle: this.data.title,
       },
     });
+  }
+
+  public closeDialog() {
+    this.dialogRef.close();
   }
 
   ngOnInit(): void {}
