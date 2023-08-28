@@ -1,6 +1,18 @@
 :host {
-    width: 100%;
+  background: #2A3042;
+  width: 100%;
+  @media (min-width: 1024px) {
     position: sticky;
     align-self: flex-start;
-    top: 0;
+  }
+  top: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #c3ac8c;
+    & .bars {
+      fill: #c3ac8c;
+    }
+    & .border-line {
+      fill: #000000;
+    }
 }
