@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of, throwError } from 'rxjs';
-import { Image, imagesDemo } from 'libs/interfaces/image.interface';
+import { Image, imagesDemo } from 'libs/Utils/interfaces/image.interface';
 
 @Injectable({
   providedIn: 'root',
