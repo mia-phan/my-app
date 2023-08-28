@@ -3,13 +3,13 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material/icon';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
-import { Image } from 'libs/Utils/interfaces/image.interface';
+import { Image } from 'libs/interfaces/image.interface';
 import {
   closeIcon,
   heartIcon,
   readHeartIcon,
   shareIcon,
-} from 'libs/Utils/icons/icons';
+} from 'libs/icons/icons';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { ShareBottomSheetComponent } from './share-bottom-sheet/share-bottom-sheet.component';
 

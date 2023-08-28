@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 import { ImageService } from '../image.service';
-import { Image } from 'libs/Utils/interfaces/image.interface';
+import { Image } from 'libs/interfaces/image.interface';
 
 @Component({
   selector: 'app-image-post',

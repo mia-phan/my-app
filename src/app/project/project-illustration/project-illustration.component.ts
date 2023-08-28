@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Image } from 'libs/Utils/interfaces/image.interface';
+import { Image } from 'libs/interfaces/image.interface';
 import { MatDialog } from '@angular/material/dialog';
 
 import { IllustrationDialogComponent } from './illustration-dialog/illustration-dialog.component';

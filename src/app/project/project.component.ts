@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Image } from 'libs/Utils/interfaces/image.interface';
+import { Image } from 'libs/interfaces/image.interface';
 
 @Component({
   selector: 'app-project',
