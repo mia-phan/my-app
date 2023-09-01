@@ -21,9 +21,11 @@ export class ProjectIllustrationComponent implements OnInit {
     this.imageService.getImages().subscribe((images) => (this.images = images)); //fetch data synchronously with ObServable data
   }
 
-  public openImageDialog(image: Image) {
+  public openImageDialog(image: Image): void {
     this.dialog.open(IllustrationDialogComponent, {
-      width: '1000px',
+      maxWidth: '100vw',
+      width: '100%',
+      maxHeight: '100vh',
       data: image,
     });
   }
