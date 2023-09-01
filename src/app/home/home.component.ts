@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Image, supports } from 'libs/interfaces/image.interface';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  public hello: string[] = ['h', 'e', 'l', 'l', 'o', '!'];
-
+  public supportLogo: Image[] = supports;
   constructor() {}
 
-  private animatationHello() {}
   ngOnInit(): void {}
 }
