@@ -1,0 +1,18 @@
+:host {
+  width: 100%;
+
+  & input[type=checkbox] {
+    display: none;
+  }
+
+  & .image-container img {
+    margin: 100px;
+    transition: transform 0.25s ease;
+    cursor: zoom-in;
+  }
+
+  & input[type=checkbox]:checked ~ label > img {
+    transform: scale(2);
+    cursor: zoom-out;
+  }
+}
