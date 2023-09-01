@@ -1,13 +1,86 @@
 <ng-container>
-    <section class="section-two">
-      <div class="grid grid-cols-2 mobile:grid-cols-1 gap-5 m-[100px] mobile:m-2">
-        <div class="flex flex-col justify-start items-start ml-2 mobile:ml-0 greting-content">
+  <div class="flex flex-col">
+    <section class="flex flex-col">
+      <h1 class="flex justify-center items-center m-[100px] p-5 mobile:m-5 primary-header">WELCOME TO MYAPP</h1>
+      <div class="flex justify-center m-5">
+        <img class="rounded-xl drop-shadow-md w-[1200px] mobile:w-fit"
+          src="https://images.unsplash.com/photo-1585435465945-bef5a93f8849?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
+          alt="">
+      </div>
+    </section>
+
+    <section class="flex flex-row pt-[250px] mobile:flex-col mobile:pt-[50px] mobile:justify-center">
+      <div class="flex flex-col gap-5 m-[100px] mobile:mx-5">
+        <div
+          class="flex flex-col justify-start gap-5 items-start ml-2 mobile:ml-0 mobile:justify-center mobile:items-center greting-content">
           <h1 class="greeting m-0">Hello!</h1>
           <h2 class="name">I'm Mia</h2>
-            <p class="w-72 h-auto my-5">I'm a little Asian person. Maintaining this website can be expensive. Please consider hiring me.</p>
-            <button class="bg-sky-500 hover:bg-sky-700 rounded-full">
-              <span class="m-5">GET STARTED</span></button>
+          <p class="w-72 h-auto my-5">I'm a little Asian person. Maintaining this website can be expensive. Please consider
+            hiring me.</p>
+          <button mat-raised-button color="primary">
+            <a href="#explore"><span class="m-5">EXPLORE</span></a>
+          </button>
+        </div>
+      </div>
+      <div class="flex flex-row h-auto m-5">
+        <mat-card>
+          <img mat-card-image
+            src="https://images.unsplash.com/photo-1653038417332-6db0ff9d4bfb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
+            alt="earth">
+          <mat-card-content>
+            <p class="flex justify-center items-center m-3">This application shows recruiters what I can do as a junior
+              software developer. I'm still updating features so bear with me.</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </section>
+
+    <section id="explore"
+      class="flex flex-col justify-center items-center pt-[250px] mobile:pt-[50px] mobile:justify-center">
+      <div class="flex justify-center items-center">
+        <h1 class="header">What you will see in this app</h1>
+      </div>
+      <div class="grid grid-cols-4 gap-5 place-content-center mobile:grid-cols-2 mobile:gap-3 m-5">
+        <div class="rounded-lg drop-shadow-xl framework">
+          <div class="flex flex-col drop-shadow-md justify-center items-center p-4 text-content">
+            <h1>Framework</h1>
+            <p>MyApp uses Angular framework.</p>
+          </div>
+        </div>
+        <div class="rounded-lg drop-shadow-xl projects">
+          <div class="flex flex-col justify-center items-center p-4 text-content text-content">
+            <h1>Projects</h1>
+            <p>Apart from programming, I do digital art as a hobby. Illustration and character design are two of my
+            favourites. If you're interested, visit my <a href="https://www.artstation.com/zelhel">Artstation</a> for more.</p>
+          </div>
+        </div>
+        <div class="rounded-lg drop-shadow-xl about-me">
+          <div class="flex flex-col justify-center items-center p-4 text-content">
+            <h1>About me</h1>
+            <p>Read "About" for skill set and experience from my previous jobs.</p></div>
+        </div>
+        <div class="rounded-lg drop-shadow-xl coming-up">
+          <div class="flex flex-col justify-center items-center p-4 text-content">
+            <h1>Coming up</h1>
+            <p>There will be new features coming to this app such as Comment section, Userlogin and etc. </p>
+          </div>
         </div>
       </div>
     </section>
+
+    <section class="flex flex-col justify-center items-center gap-5 py-[150px] mobile:py-[50px] mobile:justify-center">
+      <h1 class="m-[50px] header">Supports</h1>
+      <div class="flex h-[100px] w-full flex-row justify-center">
+        <div class="logo-container">
+          <ul class="logo-container-inside flex h-full gap-5">
+            <li *ngFor="let logo of supportLogo" class="support-logo flex flex-1 flex-row items-center justify-center">
+              <img class="h-full w-[100px] flex-initial object-contain" [src]="logo.url" [alt]="logo.title">
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
 </ng-container>
