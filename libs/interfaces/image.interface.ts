@@ -60,17 +60,27 @@ export const supports: Image[] = [
   },
   {
     id: 14,
+    url: 'https://res.cloudinary.com/depf1ep80/image/upload/v1693547685/programmer_q8lyll.png',
+    title: 'Hubby',
+  },
+  {
+    id: 15,
     url: 'https://res.cloudinary.com/depf1ep80/image/upload/v1693462275/social_yg7ndp.png',
     title: 'Stack Overflow ',
   },
   {
-    id: 15,
+    id: 16,
     url: 'https://res.cloudinary.com/depf1ep80/image/upload/v1693462275/github_aqf7uu.png',
     title: 'Github',
   },
   {
-    id: 16,
+    id: 17,
     url: 'https://res.cloudinary.com/depf1ep80/image/upload/v1693462275/google_iqg5mv.png',
     title: 'Google',
+  },
+  {
+    id: 14,
+    url: 'https://res.cloudinary.com/depf1ep80/image/upload/v1693547685/programmer_q8lyll.png',
+    title: 'Hubby',
   },
 ];
