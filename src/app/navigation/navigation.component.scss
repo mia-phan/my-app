@@ -7,10 +7,14 @@
   }
   z-index: 2;
   top: 0;
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 700;
   color: #c3ac8c;
     & .bars {
       fill: #c3ac8c;
     }
+
+  & .mat-divider {
+    --mat-divider-color: rgb(132, 132, 132);
+  }
 }

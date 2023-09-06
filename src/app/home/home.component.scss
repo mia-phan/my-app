@@ -4,11 +4,37 @@
 :host {
   font-family: 'Roboto Condensed', sans-serif;
   min-height: 100vh;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(42, 48, 66, 1) 0%, rgba(255, 255, 255, 1) 100%);
 
-  & .greeting {
-    font-size: 96px;
-    color: #2A3042;
+
+  & .greeting-section {
+    position: relative;
+    overflow: hidden;
+
+    & .greeting-container {
+      margin: 0 auto;
+      color: #ffff;
+
+      & .greeting-content{
+        z-index: 1;
+
+        & .greeting {
+          font-size: 96px;
+        }
+
+        & .name {
+          font-size: 50px;
+        }
+      }
+    }
+
+    & .video-background {
+      position: absolute;
+      max-width: fit-content;
+    }
   }
+
 
   @keyframes translateinfinite {
     0% {
@@ -46,9 +72,7 @@
 
   & .primary-header {
     font-weight: 700;
-    & .name {
-      font-size: 50px;
-    }
+    color: #C3A38C;
   }
 
   & .header {

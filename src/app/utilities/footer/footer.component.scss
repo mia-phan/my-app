@@ -4,7 +4,9 @@
   width: 100%;
   background: #2A3042;
   color: #ECEBE7;
-  .footer {
-    margin: 0;
+
+  & .mat-divider {
+    --mat-divider-color: rgb(132, 132, 132);
   }
 }
+
