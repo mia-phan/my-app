@@ -25,7 +25,8 @@ export class ProjectIllustrationComponent implements OnInit {
     this.dialog.open(IllustrationDialogComponent, {
       maxWidth: '100vw',
       width: '100%',
-      maxHeight: '100vh',
+      height: '100vh',
+      panelClass: 'mat-dialog-background',
       data: image,
     });
   }

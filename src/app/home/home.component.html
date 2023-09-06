@@ -9,26 +9,29 @@
       </div>
     </section>
 
-    <section class="flex flex-row pt-[150px] mobile:flex-col mobile:pt-[50px] mobile:justify-center">
-      <div class="flex flex-col gap-5 m-[100px] mobile:mx-5">
+    <section class="grid grid-cols-2 mobile:grid-cols-1 place-content-center place-items-center m-2 mobile:gap-2 greeting-section">
+      <div class="flex justify-center items-center gap-5 mobile:gap-0 greeting-container">
         <div
-          class="flex flex-col justify-start gap-5 items-start ml-2 mobile:ml-0 mobile:justify-center mobile:items-center greting-content">
-          <h1 class="greeting m-0">Hello!</h1>
+          class="flex flex-col gap-5 justify-center items-center mobile:gap-2 mobile:p-5 mobile:m-5 greeting-content">
+          <h1 class="greeting">Hello!</h1>
           <h2 class="name">I'm Mia</h2>
-          <p class="w-72 h-auto my-5">I'm a little Asian person. Maintaining this website can be expensive. Please consider
+          <p class="w-72 h-auto py-5 mobile:p-3">I'm a little Asian person. Maintaining this website can be expensive. Please consider
             hiring me.</p>
           <button mat-raised-button color="primary">
-            <a href="#explore"><span class="m-5">EXPLORE</span></a>
+            <a href="#explore"><span class="p-5">EXPLORE</span></a>
           </button>
         </div>
+        <video class="video-background"
+          src="https://res.cloudinary.com/depf1ep80/video/upload/v1693800332/pexels_videos_1877846_1080p_tsvoda.mp4" autoplay
+          loop muted></video>
       </div>
-      <div class="flex flex-row h-auto m-5">
+      <div class="flex flex-row justify-center h-auto">
         <mat-card>
           <img mat-card-image
             src="https://images.unsplash.com/photo-1653038417332-6db0ff9d4bfb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
             alt="earth">
           <mat-card-content>
-            <p class="flex justify-center items-center m-3">This application shows recruiters what I can do as a junior
+            <p class="p-3">This application shows recruiters what I can do as a junior
               software developer. I'm still updating features so bear with me.</p>
           </mat-card-content>
         </mat-card>

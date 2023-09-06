@@ -1,18 +1,41 @@
 :host {
   width: 100%;
 
+  & .dialog-header {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+    top: 0px;
+    left: 0px;
+    right: 0px;
+  }
+
   & input[type=checkbox] {
     display: none;
   }
 
   & .image-container img {
-    margin: 100px;
+    overflow: visible;
+    margin: auto;
     transition: transform 0.25s ease;
     cursor: zoom-in;
   }
 
   & input[type=checkbox]:checked ~ label > img {
-    transform: scale(2);
+    transform: scale(2.5);
     cursor: zoom-out;
+  }
+}
+
+::ng-deep .mat-dialog-background {
+  & .mat-mdc-dialog-container {
+    --mdc-dialog-container-color: black;
+    --mdc-dialog-subhead-color: white;
+    --mdc-dialog-supporting-text-color: white;
+  }
+
+  & app-illustration-dialog {
+    & .mat-mdc-dialog-content {
+      max-height: 100vh;
+    }
   }
 }
