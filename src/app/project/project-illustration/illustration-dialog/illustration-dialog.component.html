@@ -21,11 +21,21 @@
     </div>
   </div>
 
-  <div class="flex justify-center items-center image-container">
-    <input id="zoom-check" type="checkbox">
-    <label for="zoom-check">
-      <img [src]="data.url" [alt]="data.title">
-    </label>
-  </div>
+  <!-- <div class="flex flex-row gap-5"> -->
+    <div class="flex flex-grow justify-center items-center image-container">
+      <input id="zoom-check" type="checkbox">
+      <label for="zoom-check">
+        <img class="max-h-[100vh]" [src]="data.url" [alt]="data.title">
+      </label>
+    </div>
+    <!-- <div class="flex w-[250px] max-h-[100vh] mobile:hidden comment">
+      <form action="">
+        <mat-form-field class="example-full-width">
+          <mat-label>Leave a comment</mat-label>
+          <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+        </mat-form-field>
+      </form>
+    </div> -->
+  <!-- </div> -->
 </mat-dialog-content>
 
