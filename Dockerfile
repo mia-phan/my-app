@@ -2,7 +2,9 @@
 
 # Adjust NODE_VERSION as desired
 ARG NODE_VERSION=20.0.0
-FROM node:${NODE_VERSION}-slim as base
+
+# Throw-away build stage to reduce size of final image
+FROM node:${NODE_VERSION}-slim as build
 
 LABEL fly_launch_runtime="Node.js"
 
@@ -11,10 +13,6 @@ WORKDIR /app
 
 # Set production environment
 ENV NODE_ENV="production"
-
-
-# Throw-away build stage to reduce size of final image
-FROM base as build
 
 # Install packages needed to build node modules
 RUN apt-get update -qq && \
@@ -35,11 +33,7 @@ RUN npm prune --omit=dev
 
 
 # Final stage for app image
-FROM base
+FROM pierrezemb/gostatic
 
 # Copy built application
-COPY --from=build /app /app
-
-# Start the server by default, this can be overwritten at runtime
-EXPOSE 8080
-CMD [ "npm", "run", "start" ]
+COPY --from=build /app/dist/my-app /srv/http/
