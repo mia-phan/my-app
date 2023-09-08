@@ -62,7 +62,7 @@ export class IllustrationDialogComponent implements OnInit {
   public openBottomSheet() {
     this.bottomSheet.open(ShareBottomSheetComponent, {
       data: {
-        shareUrl: `http://localhost:4200/projetcs/image-post/${this.data.id}`,
+        shareUrl: `http://miaphan.me/projetcs/image-post/${this.data.id}`,
         shareTitle: this.data.title,
       },
     });
