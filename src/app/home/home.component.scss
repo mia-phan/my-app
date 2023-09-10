@@ -32,6 +32,10 @@
     & .video-background {
       position: absolute;
       max-width: fit-content;
+
+      &::-webkit-media-controls-start-playback-button {
+        display: none;
+      }
     }
   }
 
