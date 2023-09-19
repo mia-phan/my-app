@@ -1,56 +1,49 @@
 <ng-container>
   <div class="flex flex-col">
-    <section class="flex flex-col">
-      <h1 class="flex justify-center items-center m-[100px] p-5 mobile:m-5 primary-header">WELCOME TO MYAPP</h1>
-      <div class="flex justify-center m-5">
-        <img class="rounded-xl drop-shadow-md w-[1200px] mobile:w-fit"
-          src="https://images.unsplash.com/photo-1585435465945-bef5a93f8849?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
-          alt="">
-      </div>
-    </section>
-
-    <section class="grid grid-cols-2 mobile:grid-cols-1 place-content-center place-items-center m-2 mobile:gap-2 greeting-section">
-      <div class="flex justify-center items-center gap-5 mobile:gap-0 greeting-container">
+    <section class="grid grid-cols-2 mobile:grid-cols-1 place-content-center place-items-center mobile:gap-2 greeting-section">
+      <div class="flex justify-center items-start p-[30px] gap-5 mobile:gap-0 mobile:p-0 mobile:pt-[30px] greeting-container">
         <div
-          class="flex flex-col gap-5 justify-center items-center mobile:gap-2 mobile:p-5 mobile:m-5 greeting-content">
-          <h1 class="greeting">Hello!</h1>
+          class="flex flex-col gap-5 justify-center items-start p-[30px] mobile:gap-2 mobile:p-2 greeting-content">
+          <h1 class="greeting">Welcome</h1>
           <h2 class="name">I'm Mia</h2>
           <p class="w-72 h-auto py-5 mobile:p-3">I'm a little Asian person. Maintaining this website can be expensive. Please consider
             hiring me.</p>
+          <p class="w-72 h-auto py-5 mobile:p-3">This application shows recruiters what I can do as a junior
+          software developer. I'm still updating features so bear with me.</p>
           <button mat-raised-button color="primary">
             <a href="#explore"><span class="p-5">EXPLORE</span></a>
           </button>
         </div>
-        <video class="video-background"
-          autoplay="autoplay" loop muted playsinline>
-          <source src="https://res.cloudinary.com/depf1ep80/video/upload/v1693800332/pexels_videos_1877846_1080p_tsvoda.mp4" type="video/mp4">
-        </video>
       </div>
-      <div class="flex flex-row justify-center h-auto">
-        <mat-card>
-          <img mat-card-image
-            src="https://images.unsplash.com/photo-1653038417332-6db0ff9d4bfb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
-            alt="earth">
-          <mat-card-content>
-            <p class="p-3">This application shows recruiters what I can do as a junior
-              software developer. I'm still updating features so bear with me.</p>
-          </mat-card-content>
-        </mat-card>
+      <div class="right-container">
+        <img class="mobile:w-[400px]" src="https://res.cloudinary.com/depf1ep80/image/upload/v1694666267/Screen_Shot_2023-09-14_at_4.34.39_PM_juod4n.png" alt="">
       </div>
     </section>
+      <!-- <video class="video-background" autoplay="autoplay" loop muted playsinline>
+        <source src="https://res.cloudinary.com/depf1ep80/video/upload/v1693800332/pexels_videos_1877846_1080p_tsvoda.mp4"
+          type="video/mp4">
+      </video> -->
 
     <section id="explore"
       class="flex flex-col justify-center items-center pt-[150px] mobile:pt-[50px] mobile:justify-center">
       <div class="flex justify-center items-center">
         <h1 class="header">What you will see in this app</h1>
       </div>
+      <!-- framework -->
       <div class="grid grid-cols-4 gap-5 place-content-center mobile:grid-cols-2 mobile:gap-3 m-5">
         <div class="rounded-lg drop-shadow-xl framework">
-          <div class="flex flex-col drop-shadow-md justify-center items-center p-4 text-content">
-            <h1>Framework</h1>
-            <p>MyApp uses Angular framework.</p>
-          </div>
+          <a href="https://github.com/mia-phan/my-app">
+            <div class="flex flex-col drop-shadow-md justify-center items-center p-4 text-content">
+              <h1>Framework</h1>
+              <p>MyApp uses Angular framework. Powered by <a href="https://fly.io/">fly.io</a></p>
+              <div class="flex p-1 justify-center items-center repository">
+                <p class="repository-link">github.com/mia-phan/my-app</p>
+              </div>
+            </div>
+          </a>
         </div>
+
+        <!-- projects -->
         <div class="rounded-lg drop-shadow-xl projects">
           <div class="flex flex-col justify-center items-center p-4 text-content text-content">
             <h1>Projects</h1>
@@ -58,15 +51,40 @@
             favourites. If you're interested, visit my <a href="https://www.artstation.com/zelhel">Artstation</a> for more.</p>
           </div>
         </div>
+
+        <!-- about-me -->
         <div class="rounded-lg drop-shadow-xl about-me">
           <div class="flex flex-col justify-center items-center p-4 text-content">
             <h1>About me</h1>
-            <p>Read "About" for skill set and experience from my previous jobs.</p></div>
+            <p>Read "About" for skill set and experience from my previous jobs.</p>
+          </div>
         </div>
+
+        <!-- coming-up -->
         <div class="rounded-lg drop-shadow-xl coming-up">
           <div class="flex flex-col justify-center items-center p-4 text-content">
             <h1>Coming up</h1>
             <p>There will be new features coming to this app such as Comment section, Userlogin and etc. </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="p-[30px] mt-[150px] mobile:py-[50px] my-expertise">
+      <div class="flex justify-center items-center">
+        <h1 class="flex text-white">I'm still learning, but here are what I can do</h1>
+      </div>
+      <div class="grid grid-cols-2 place-content-center place-items-start p-3 text-white divide-x">
+        <div class="flex flex-row">
+          <div class="flex-auto">
+            <h2>Software Development</h2>
+            <p>JavaScript, TypeScript</p>
+          </div>
+        </div>
+        <div class="flex flex-row pl-3">
+          <div class="flex-auto">
+            <h2>Frondend Dev</h2>
+            <p>HTML, CSS, SASS, Tailwinds, Bootstrap, Angular framework</p>
           </div>
         </div>
       </div>
